@@ -1,7 +1,6 @@
 package single_byte_xor_cipher
 
 import (
-	"fmt"
 	"github.com/ray.vhatt/cryptopals/set1/convert_hex_to_base64"
 	"io/ioutil"
 	"log"
@@ -82,11 +81,11 @@ func DecryptSingleByteXOR(enHex string) []string {
 
 		// get xor cipher
 		ci := sr.Key ^ topEnCharRank.Key
-		ciHex := convert_hex_to_base64.Bytes2Hex([]byte{ci})
-		fmt.Printf("Decrypted with cipher %s\n", ciHex)
+		//ciHex := convert_hex_to_base64.Bytes2Hex([]byte{ci})
+		//fmt.Printf("Decrypted with cipher %s\n", ciHex)
 		decrypted := decrypt(enBs, ci)
-		fmt.Printf("Decrypted message is %s\n", decrypted)
-		fmt.Print("=============================\n\n")
+		//fmt.Printf("Decrypted message is %s\n", decrypted)
+		//fmt.Print("=============================\n\n")
 		possibleDecrypted = append(possibleDecrypted, decrypted)
 	}
 
